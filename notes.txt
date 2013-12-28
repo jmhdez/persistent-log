@@ -1,0 +1,23 @@
+OK, so right now the api would be something like:
+
+var storage = new plog.storage.LocalStorage();
+plog.setLevel(plog.level.INFO);
+plog.useStorage(storage);
+
+plog.debug(...)
+plog.info(...)
+plog.warn(...)
+plog.error(...)
+plog.fatal(...)
+
+var events = storage.getEvents();
+
+
+TODO
+----
+
+Refactor to browserify
+Create grunt script to handle build (browserify + ¿uglify? + karma)
+Create readme file
+Push to npm
+¿Add a sample UI based on consolejs to show the last entries?

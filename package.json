@@ -1,0 +1,17 @@
+{
+  "name": "persistent-log",
+  "version": "0.0.1",
+  "description": "Persisten log for javascript client apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Juan M. Hernández",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "karma": "~0.11.12"
+  }
+}
