@@ -15,7 +15,7 @@ describe('LocalStorage', function() {
     var events = storage.getEvents();
     expect(events[0].msg).toBe('one');
     expect(events[1].msg).toBe('two');
-  })
+  });
 
   describe('when size grows over max size', function() {
 
@@ -36,7 +36,7 @@ describe('LocalStorage', function() {
     it('drops older events', function() {
       expect(events[0].msg).toBe(2);
       expect(events[8].msg).toBe('the last one');
-    })
-  })
+    });
+  });
 
 });

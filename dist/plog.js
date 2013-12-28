@@ -55,7 +55,7 @@ var LocalStorage = function(opts) {
 LocalStorage.prototype.clear = function() {
   foreachKey(function(key) {
     delete localStorage[key];
-  })
+  });
   initialize();
 };
 
@@ -77,7 +77,7 @@ LocalStorage.prototype.getEvents = function() {
   foreachKey(function(key) {
     var event = localStorage[key];
     events.push(JSON.parse(event));
-  })
+  });
   return events;
 };
 
@@ -149,15 +149,17 @@ function write(level, msg) {
   currentStorage.append(event);
 }
 
+function createWriteFunc(level) {
+  return function(msg) {
+    write(level, msg);
+  };
+}
+
 for (var levelName in plog.level) {
   if (plog.level.hasOwnProperty(levelName)) {
-    plog[levelName.toLowerCase()] = (function(name) {
-      return function(msg) {
-        write(name, msg);
-      };
-    })(plog.level[levelName]);
+    plog[levelName.toLowerCase()] = createWriteFunc(plog.level[levelName]);
   }
-};
+}
 
 module.exports = plog;
 },{"./InMemoryStorage":1,"./LocalStorage":2}]},{},[3])
