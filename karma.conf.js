@@ -15,9 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "lib/index.js",
-      "lib/storage.js",
-      "lib/plog.js",
+      "dist/plog.js",
       "specs/**/*.js"
     ],
 

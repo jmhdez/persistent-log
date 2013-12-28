@@ -9,7 +9,7 @@ describe('plog', function() {
     it('is initialized with default settings', function() {
       var storage = plog.getStorage();
       var level = plog.getLevel();
-      expect(storage instanceof plog.storage.InMemoryStorage).toBe(true);
+      expect(storage instanceof plog.storage.LocalStorage).toBe(true);
       expect(level).toBe(plog.level.INFO);
     })
 

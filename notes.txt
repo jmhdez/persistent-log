@@ -20,4 +20,5 @@ Refactor to browserify
 Create grunt script to handle build (browserify + ¿uglify? + karma)
 Create readme file
 Push to npm
+Ensure everything works after cloning repo (i.e. check npm deps)
 ¿Add a sample UI based on consolejs to show the last entries?
