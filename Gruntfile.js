@@ -11,14 +11,22 @@ module.exports = function(grunt) {
         src: './lib/index.js',
         dest: './dist/plog.js'
       }
+    },
+
+    karma: {
+      all: {
+        configFile: 'karma.conf.js',
+        options: {
+          singleRun: true
+        }
+      }
     }
-
-
 
   });
 
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['browserify']);
+  grunt.registerTask('default', ['browserify', 'karma']);
 
 };
