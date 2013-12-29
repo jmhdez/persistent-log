@@ -1,6 +1,6 @@
 describe('InMemoryStorage', function() {
 
-  var storage = new plog.storage.InMemoryStorage();
+  var storage = new plog.storages.InMemoryStorage();
 
   beforeEach(function() {
     storage.clear();

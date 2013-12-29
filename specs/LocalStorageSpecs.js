@@ -1,6 +1,6 @@
 describe('LocalStorage', function() {
 
-  var storage = new plog.storage.LocalStorage({
+  var storage = new plog.storages.LocalStorage({
     maxSize: 10
   });
 

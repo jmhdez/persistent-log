@@ -99,7 +99,7 @@ module.exports = LocalStorage;
 },{}],3:[function(require,module,exports){
 var plog = {};
 
-plog.storage = {
+plog.storages = {
   LocalStorage: require('./LocalStorage'),
   InMemoryStorage: require('./InMemoryStorage')
 };
@@ -115,7 +115,7 @@ plog.level = {
 var currentStorage, currentLevel;
 
 plog.reset = function() {
-  currentStorage = new plog.storage.LocalStorage();
+  currentStorage = new plog.storages.LocalStorage();
   currentLevel = plog.level.INFO;
 };
 
