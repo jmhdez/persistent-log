@@ -46,6 +46,11 @@ describe('plog', function() {
         var now = new Date();
         expect(+events[0].date/1000).toBeCloseTo(+now/1000, 0);
       });
+      
+      it('adds the event with the specified level', function() {
+        plog.warn('this is a warning');
+        expect(events[0].level).toBe(plog.level.WARN);
+      });
 
     });
 
