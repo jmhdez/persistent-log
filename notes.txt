@@ -15,10 +15,20 @@ var events = storage.getEvents();
 
 TODO
 ----
-
-Refactor to browserify
-Create grunt script to handle build (browserify + ¿uglify? + karma)
 Create readme file
+  Write docs
 Push to npm
 Ensure everything works after cloning repo (i.e. check npm deps)
 ¿Add a sample UI based on consolejs to show the last entries?
+
+
+HOW TO BUILD
+------------
+1. Clone repo
+2. npm install
+3. You need to install grunt-cli globally to run grunt:
+    npm install grunt-cli -g
+4. To build (the result will be placed in ./dist/plog.js):
+    grunt 
+5. To enable continuous testing during development:
+    grunt dev
