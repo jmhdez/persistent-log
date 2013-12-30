@@ -31,11 +31,6 @@ function loadIndex() {
   return JSON.parse(localStorage[INDEX_KEY]);
 }
 
-function currentSize() {
-  var index = loadIndex(); 
-  return index.nextId - index.firstId;
-}
-
 function foreachKey(callback) {
   var index = loadIndex();
   for (var id = index.firstId; id < index.nextId; id++) {
@@ -83,11 +78,14 @@ LocalStorage.prototype.getEvents = function() {
 
 LocalStorage.prototype.append = function(event) {
 
-  if (currentSize() + 1 > this.maxSize)
-    this.purgeOldEvents();
-
   var index = loadIndex();
+  var currentSize = index.nextId - index.firstId;
 
+  if (currentSize + 1 > this.maxSize) {
+    this.purgeOldEvents();
+    index = loadIndex();
+  }
+    
   var key = 'plog-event-' + index.nextId;
   localStorage[key] = JSON.stringify(event);
 
