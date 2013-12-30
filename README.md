@@ -8,14 +8,14 @@ Why another log library? Isn't console.log good enough?
 
 With the increasing complexity in javascript client apps, volatile logs like the one offered by `console.log()` are often not enough to track down that elusive bug your users are finding.
 
-persistent-log allows your app to save log messages using `localStorage` and read those from your app whenever you need, event when they were logged in another session.
+persistent-log allows your app to save log messages using `localStorage` and read them whenever you need, event if they were logged in another session.
 
 How to use
 ----------
 
 Get persistent-log from https://raw.github.com/jmhdez/persistent-log/master/dist/plog.js and include it in your page.
 
-```
+```Javascript
 // Create a storage object
 var storage = new plog.storages.LocalStorage({maxSize: 200})
 
