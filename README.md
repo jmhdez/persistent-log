@@ -38,9 +38,9 @@ Each logged message will be recorded as an event with the following shape:
 
 ```
 {
-	level: plog.level.INFO,
+	level: 0, // 0 - DEBUG, ..., 3 - FATAL
 	msg: 'some message',
-	date: Date object
+	date: '2013-12-31T12:04:32.283Z'
 }
 ```
 
