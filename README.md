@@ -1,4 +1,4 @@
-persistent-log
+persistent-log [![Build Status](https://travis-ci.org/jmhdez/persistent-log.png?branch=master)](https://travis-ci.org/jmhdez/persistent-log)
 ==============
 
 Persistent log is a a simple logging library for javascript client applications. 
