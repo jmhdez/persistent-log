@@ -107,7 +107,13 @@ plog.level = {
   INFO: 1,
   WARN: 2,
   ERROR: 3,
-  FATAL: 4
+  FATAL: 4,
+  getName: function(level) {
+    for (var x in this) {
+      if (this[x] === level) return x;
+    }
+    return level;
+  }
 };
 
 var currentStorage, currentLevel;

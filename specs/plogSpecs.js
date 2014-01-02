@@ -21,6 +21,16 @@ describe('plog', function() {
 
   });
 
+  describe('when working with levels', function() {
+    it ('can get the level name using the level number', function() {
+      expect(plog.level.getName(plog.level.DEBUG)).toBe('DEBUG');
+      expect(plog.level.getName(plog.level.INFO)).toBe('INFO');
+      expect(plog.level.getName(plog.level.WARN)).toBe('WARN');
+      expect(plog.level.getName(plog.level.ERROR)).toBe('ERROR');
+      expect(plog.level.getName(plog.level.FATAL)).toBe('FATAL');
+    });
+  });
+
   describe('when logging a text message', function() {
 
     var events = [];
