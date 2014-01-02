@@ -28,14 +28,15 @@ module.exports = function(grunt) {
     },
 
     karma: {
+      options: {
+        configFile: 'karma.conf.js'
+      },
       build: {
-        configFile: 'karma.conf.js',
         options: {
           singleRun: true
         }
       },
       dev: {
-        configFile: 'karma.conf.js',
         options: {
           background: true,
           autoWatch: false
