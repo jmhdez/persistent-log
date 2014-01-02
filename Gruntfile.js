@@ -47,7 +47,10 @@ module.exports = function(grunt) {
     watch: {
       dev: {
         files: srcFiles,
-        tasks: ['jshint:dev', 'browserify', 'karma:dev:run']
+        tasks: ['jshint:dev', 'browserify', 'karma:dev:run'],
+        options: {
+          spawn: false
+        }
       }
     }
 
