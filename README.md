@@ -1,4 +1,4 @@
-persistent-log
+persistent-log [Build Status](https://secure.travis-ci.org/visionmedia/express.png)](http://travis-ci.org/visionmedia/express)
 ==============
 
 Persistent log is a a simple logging library for javascript client applications. 
