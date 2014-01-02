@@ -151,6 +151,8 @@ function write(level, msg) {
   };
 
   currentStorage.append(event);
+
+  console.log(event.date.toISOString() + ': ' + plog.level.getName(level) + ': ' + event.message);
 }
 
 function createWriteFunc(level) {
